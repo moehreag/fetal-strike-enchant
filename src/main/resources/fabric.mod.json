@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "fetalstrike",
+	"version": "${version}",
+	"name": "Fetal Strike",
+	"description": "Doubles damage dealt to child mobs. YOU MONSTER!",
+	"authors": [
+		"moehreag"
+	],
+	"contact": {
+		"homepage": "https://github.com/moehreag/fetal-strike-enchant",
+		"sources": "https://github.com/moehreag/fetal-strike-enchant"
+	},
+	"license": "LGPL-3.0-or-later",
+	"icon": "assets/fetalstrike/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.moehreag.fetalstrike.FetalStrikeMain"
+		],
+		"fabric-datagen": [
+			"io.github.moehreag.fetalstrike.FetalStrikeDataGenerator"
+		]
+	},
+	"mixins": [
+		"fetalstrike.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.4",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"accessWidener": "fetalstrike.accesswidener"
+}

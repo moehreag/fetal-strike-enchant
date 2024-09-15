@@ -1,0 +1,39 @@
+{
+  "criteria": {
+    "kill_child": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "flags": {
+                "is_baby": true
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "fetalstrike.advancement.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:netherite_sword"
+    },
+    "title": {
+      "translate": "fetalstrike.advancement.title"
+    }
+  },
+  "requirements": [
+    [
+      "kill_child"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
