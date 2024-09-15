@@ -85,7 +85,7 @@ public class FetalStrikeDataGenerator implements DataGeneratorEntrypoint {
 			}
 
 			@Override
-			public String getName() {
+			public @NotNull String getName() {
 				return "FetalStrike/Registry";
 			}
 
@@ -100,7 +100,7 @@ public class FetalStrikeDataGenerator implements DataGeneratorEntrypoint {
 									return CompletableFuture.allOf(
 											registryLookup.listElements()
 													.filter(reference -> reference.key().location().getNamespace().equals("fetalstrike"))
-													.map(reference -> dumpValue(pathProvider.json(reference.key().location()), cachedOutput, dynamicOps, registryData.elementCodec(), (T) reference.value()))
+													.map(reference -> dumpValue(pathProvider.json(reference.key().location()), cachedOutput, dynamicOps, registryData.elementCodec(), reference.value()))
 													.toArray(CompletableFuture[]::new)
 									);
 								}
